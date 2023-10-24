@@ -6,7 +6,7 @@
 /*   By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 20:47:26 by jorvarea          #+#    #+#             */
-/*   Updated: 2023/10/24 22:13:47 by jorvarea         ###   ########.fr       */
+/*   Updated: 2023/10/24 22:31:49 by jorvarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int ft_handle_format (const char c, va_list args)
     int bytes_written;
 
     if (c == 'c')
-        bytes_written = ft_putchar_fd(va_arg(args, char), 1);
+        bytes_written = ft_putchar(va_arg(args, char), 1);
     else
         bytes_written = 0;
     return (bytes_written);

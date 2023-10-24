@@ -1,4 +1,4 @@
-main.c
-main_bonus.c
 .DS_STORE
 a.out
+*.o
+*.a

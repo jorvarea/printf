@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 19:52:06 by jorvarea          #+#    #+#             */
-/*   Updated: 2023/10/24 22:21:04 by jorvarea         ###   ########.fr       */
+/*   Created: 2023/10/24 20:52:52 by jorvarea          #+#    #+#             */
+/*   Updated: 2023/10/24 20:54:06 by jorvarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#include "printf.h"
 
-#include "libft/libft.h"
-#include <stdarg.h>
-#include <unistd.h>
+int main(void)
+{
+    int a;
+    int b;
 
-int ft_printf(char const *format, ...);
-
-#endif
+    a = 1;
+    b = 3;
+    ft_printf("%d %d", a, b);
+    return (0);
+}

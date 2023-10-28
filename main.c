@@ -6,7 +6,7 @@
 /*   By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 20:52:52 by jorvarea          #+#    #+#             */
-/*   Updated: 2023/10/24 20:54:06 by jorvarea         ###   ########.fr       */
+/*   Updated: 2023/10/28 13:04:25 by jorvarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int main(void)
 {
-    int a;
-    int b;
-
-    a = 1;
-    b = 3;
-    ft_printf("%d %d", a, b);
+    char *str;
+    
+    str = "caracola";
+    ft_printf("%c %c %ca, %s\n", 'h', 'o', 'l', str);
     return (0);
 }

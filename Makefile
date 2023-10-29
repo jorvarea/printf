@@ -6,7 +6,7 @@
 #    By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 19:52:12 by jorvarea          #+#    #+#              #
-#    Updated: 2023/10/24 19:52:13 by jorvarea         ###   ########.fr        #
+#    Updated: 2023/10/29 02:58:29 by jorvarea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ all: $(LIBFT) $(NAME)
 $(LIBFT):
 	@$(MAKE) -C libft
 
-$(NAME): $(OBJECT_FILES) printf.h
+$(NAME): $(OBJECT_FILES) ft_printf.h
 	@ar -rcs $(NAME) $(OBJECT_FILES)
 
 %.o: %.c

@@ -6,7 +6,7 @@
 /*   By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 20:47:26 by jorvarea          #+#    #+#             */
-/*   Updated: 2023/11/14 19:39:03 by jorvarea         ###   ########.fr       */
+/*   Updated: 2023/11/14 22:26:07 by jorvarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	ft_handle_format(char c, va_list args)
 	else if (c == 'd' || c == 'i')
 		bytes_written = ft_putnbr(va_arg(args, int));
 	else if (c == 'u')
-		bytes_written = ft_putnbr(va_arg(args, unsigned int));
+		bytes_written = ft_uputnbr(va_arg(args, unsigned int));
 	else if (c == 'X' || c == 'x')
 		bytes_written = ft_puthex(va_arg(args, int), c);
 	else if (c == 'p')

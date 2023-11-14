@@ -6,7 +6,7 @@
 /*   By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:04:51 by jorvarea          #+#    #+#             */
-/*   Updated: 2023/11/14 21:06:52 by jorvarea         ###   ########.fr       */
+/*   Updated: 2023/11/14 22:11:36 by jorvarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ int	main(void)
     int a;
     int b;
     
-    a = printf(" NULL %s NULL \n", NULL);
-	b = ft_printf(" NULL %s NULL \n", NULL);
-    printf("a, b: %d, %d", a, b);
+    printf("printf: ");
+    a = printf(" %u \n", -1);
+    ft_printf("ft_printf: ");
+	b = ft_printf(" %u \n", -1);
+    printf("a, b: %d, %d\n", a, b);
 	return (0);
 }

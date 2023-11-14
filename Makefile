@@ -6,7 +6,7 @@
 #    By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 19:52:12 by jorvarea          #+#    #+#              #
-#    Updated: 2023/10/29 02:58:29 by jorvarea         ###   ########.fr        #
+#    Updated: 2023/11/14 20:00:28 by jorvarea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,13 +17,15 @@ CFLAGS				= -Wall -Werror -Wextra
 SOURCE_FILES   		= $(wildcard ft_*.c)
 OBJECT_FILES		= $(SOURCE_FILES:.c=.o)
 
-all: $(LIBFT) $(NAME)
+all: $(NAME)
+
+$(NAME): $(OBJECT_FILES) $(LIBFT) ft_printf.h
+	@cp $(LIBFT) .
+	@mv libft.a $(NAME)
+	@ar -rcs $(NAME) $(OBJECT_FILES)
 
 $(LIBFT):
 	@$(MAKE) -C libft
-
-$(NAME): $(OBJECT_FILES) ft_printf.h
-	@ar -rcs $(NAME) $(OBJECT_FILES)
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@

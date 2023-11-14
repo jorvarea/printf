@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 19:52:06 by jorvarea          #+#    #+#             */
-/*   Updated: 2023/11/14 19:03:32 by jorvarea         ###   ########.fr       */
+/*   Created: 2023/11/14 20:04:51 by jorvarea          #+#    #+#             */
+/*   Updated: 2023/11/14 20:04:52 by jorvarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "libft/libft.h"
-# include <stdarg.h>
-
-int	ft_printf(char const *format, ...);
-
-#endif
+int	main(void)
+{
+	ft_printf("HOLA %s", "caracola");
+	return (0);
+}

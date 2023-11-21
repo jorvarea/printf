@@ -6,14 +6,14 @@
 /*   By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 00:26:35 by jorvarea          #+#    #+#             */
-/*   Updated: 2023/11/21 22:37:47 by jorvarea         ###   ########.fr       */
+/*   Updated: 2023/11/21 23:08:12 by jorvarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_write_number(int n, int *total_bytes_written, int *error,
-		char *alphabet)
+static void	ft_write_number(unsigned int n, int *total_bytes_written,
+		int *error, char *alphabet)
 {
 	char	str[9];
 	int		i;

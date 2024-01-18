@@ -6,27 +6,28 @@
 #    By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 19:52:12 by jorvarea          #+#    #+#              #
-#    Updated: 2023/11/24 20:17:45 by jorvarea         ###   ########.fr        #
+#    Updated: 2024/01/18 01:35:41 by jorvarea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME				= libftprintf.a
+NAME				= printf.a
 CC					= gcc
 CFLAGS				= -Wall -Werror -Wextra
-SOURCE_FILES   		= ft_printf.c ft_putchar.c ft_puthex.c ft_putnbr.c \
-					  ft_putptr.c ft_putstr.c ft_secure_putchar.c ft_uputnbr.c
-OBJECT_FILES		= $(SOURCE_FILES:.c=.o)
+SOURCE_FILES   		= $(wildcard *.c)
+OBJECT_DIR 			= obj
+OBJECT_FILES		= $(SOURCE_FILES:%.c=$(OBJECT_DIR)/%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJECT_FILES) ft_printf.h
 	@ar -rcs $(NAME) $(OBJECT_FILES)
 
-%.o: %.c
+$(OBJECT_DIR)/%.o: %.c
+	@mkdir -p $(OBJECT_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -f $(OBJECT_FILES)
+	@rm -rf $(OBJECT_DIR)
 	
 fclean: clean
 	@rm -f $(NAME)

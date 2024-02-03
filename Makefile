@@ -6,14 +6,16 @@
 #    By: jorvarea <jorvarea@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 19:52:12 by jorvarea          #+#    #+#              #
-#    Updated: 2024/01/18 14:11:56 by jorvarea         ###   ########.fr        #
+#    Updated: 2024/02/03 18:05:27 by jorvarea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME				= printf.a
 CC					= gcc
 CFLAGS				= -Wall -Werror -Wextra
-SOURCE_FILES   		= $(wildcard *.c)
+SOURCE_FILES   		= ft_printf.c ft_putchar.c ft_putnbr.c ft_putstr.c \
+					  ft_uputnbr.c ft_puthex.c ft_putptr.c \
+					  ft_secure_putchar.c
 OBJECT_DIR 			= obj
 OBJECT_FILES		= $(SOURCE_FILES:%.c=$(OBJECT_DIR)/%.o)
 
